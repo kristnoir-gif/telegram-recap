@@ -28,7 +28,7 @@ a{color:inherit}
 
 /* hero */
 .hero{position:relative;text-align:center;padding:40px 20px 64px}
-.hero .logo{width:min(440px,90vw);aspect-ratio:1;display:block;margin:0 auto;-webkit-mask-image:radial-gradient(circle,#000 55%,transparent 71%);mask-image:radial-gradient(circle,#000 55%,transparent 71%)}
+.hero .logo{width:min(440px,90vw);height:auto;aspect-ratio:1;display:block;margin:0 auto;-webkit-mask-image:radial-gradient(circle,#000 55%,transparent 71%);mask-image:radial-gradient(circle,#000 55%,transparent 71%)}
 .hero h1{font-size:clamp(26px,4.5vw,44px);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin:8px auto 14px;max-width:760px}
 .hero p{color:var(--muted);font-size:clamp(16px,2vw,19px);max-width:560px;margin:0 auto 30px}
 .hero .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
@@ -36,7 +36,7 @@ a{color:inherit}
 /* deck */
 .deck{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 20px 24px;margin:0 auto;max-width:1240px;scrollbar-width:none}
 .deck::-webkit-scrollbar{display:none}
-.deck img{flex:0 0 auto;width:min(260px,62vw);aspect-ratio:9/16;border-radius:20px;scroll-snap-align:center;box-shadow:0 20px 50px rgba(0,0,0,.5);border:1px solid var(--line)}
+.deck img{flex:0 0 auto;width:min(260px,62vw);height:auto;aspect-ratio:9/16;border-radius:20px;scroll-snap-align:center;box-shadow:0 20px 50px rgba(0,0,0,.5);border:1px solid var(--line)}
 .hint{text-align:center;color:var(--muted);font-size:14px}
 
 section{padding:72px 0 0}
@@ -68,7 +68,9 @@ code{background:rgba(255,255,255,.1);padding:2px 7px;border-radius:6px;font-size
 .price .full{background:linear-gradient(160deg,rgba(255,46,126,.18),rgba(59,109,255,.14));border-color:rgba(255,255,255,.2)}
 
 .cta{text-align:center;padding:88px 0 40px}
-.cta p{color:var(--muted);margin:-10px 0 26px}
+.contact{text-align:center;padding:48px 0 0;border-top:1px solid var(--line);max-width:560px;margin:0 auto}
+.contact p{color:var(--muted);margin:-10px 0 22px}
+.contact .btn svg{fill:none;stroke:currentColor;stroke-width:2}
 footer{border-top:1px solid var(--line);margin-top:40px;padding:26px 0 40px;color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between}
 footer nav{display:flex;flex-wrap:wrap;gap:8px 18px}
 footer a{text-decoration:none}
@@ -85,7 +87,7 @@ footer a:hover{color:var(--text)}
 <body>
 
 <header class="hero wrap">
-  <img class="logo" src="img/logo.jpg" alt="Telegram Recap" width="640" height="640">
+  <img class="logo" src="img/logo_hd.jpg" alt="Telegram Recap" width="1100" height="1100">
   <h1>Итоги года для вашего <span style="white-space:nowrap">Telegram-канала</span></h1>
   <p>Пришлите боту ссылку на канал. Через пару минут он пришлёт колоду карточек: о чём вы пишете, когда, каким тоном и кто вы как автор.</p>
   <div class="actions">
@@ -99,14 +101,25 @@ footer a:hover{color:var(--text)}
 
 <div id="deck">
   <div class="deck">
-    <img src="img/cover.jpg" alt="Обложка колоды: 200 последних постов" loading="lazy">
-    <img src="img/word.jpg" alt="Любимое слово канала" loading="lazy">
-    <img src="img/archetype.jpg" alt="Архетип канала: Славный малый" loading="lazy">
-    <img src="img/chronotype.jpg" alt="Хронотип: Белочка" loading="lazy">
-    <img src="img/toxicity.jpg" alt="Уровень токсичности" loading="lazy">
-    <img src="img/summary.jpg" alt="Итоги года канала" loading="lazy">
+    <img src="img/postnauka/01_cover.jpg" alt="Обложка: 775 постов за год" width="540" height="960">
+    <img src="img/postnauka/02_numbers.jpg" alt="ПостНаука в цифрах" width="540" height="960">
+    <img src="img/postnauka/03_reading.jpg" alt="Статистика чтения: 6 часов" width="540" height="960">
+    <img src="img/postnauka/04_sum_reactions.jpg" alt="Суммарные реакции: 18 853" width="540" height="960" loading="lazy">
+    <img src="img/postnauka/06_themes.jpg" alt="Главные темы" width="540" height="960" loading="lazy">
+    <img src="img/postnauka/07_word_cloud.jpg" alt="Облако слов" width="540" height="960" loading="lazy">
+    <img src="img/postnauka/08_most_used.jpg" alt="Любимое слово: наука" width="540" height="960" loading="lazy">
+    <img src="img/postnauka/09_top_person.jpg" alt="Герои канала" width="540" height="960" loading="lazy">
+    <img src="img/postnauka/10_geography.jpg" alt="География" width="540" height="960" loading="lazy">
+    <img src="img/postnauka/11_emotions.jpg" alt="Палитра эмоций" width="540" height="960" loading="lazy">
+    <img src="img/postnauka/12_one_phrase.jpg" alt="Канал в одной фразе" width="540" height="960" loading="lazy">
+    <img src="img/postnauka/13_archetype.jpg" alt="Архетип: Мудрец" width="540" height="960" loading="lazy">
+    <img src="img/postnauka/14_chronotype.jpg" alt="Хронотип: Белочка" width="540" height="960" loading="lazy">
+    <img src="img/postnauka/15_toxicity.jpg" alt="Токсичность: Светлый" width="540" height="960" loading="lazy">
+    <img src="img/postnauka/17_language_age.jpg" alt="Языковой возраст: Зрелый" width="540" height="960" loading="lazy">
+    <img src="img/postnauka/18_vocab.jpg" alt="Лексика: Мастер слова" width="540" height="960" loading="lazy">
+    <img src="img/postnauka/19_summary.jpg" alt="Итоги года" width="540" height="960" loading="lazy">
   </div>
-  <p class="hint">Колода канала @polozhnyak. Листайте вбок →</p>
+  <p class="hint">Полная колода канала <a href="https://t.me/postnauka" target="_blank" rel="noopener">@postnauka</a>: 17 карточек. Листайте вбок →</p>
 </div>
 
 <main class="wrap">
@@ -128,7 +141,7 @@ footer a:hover{color:var(--text)}
     <h2>Как это работает</h2>
     <div class="steps">
       <div class="card"><b>Откройте бота</b><span>@insight_tg_bot в Telegram, кнопка «Старт»</span></div>
-      <div class="card"><b>Пришлите канал</b><span>имя или ссылку, например <code>t.me/polozhnyak</code></span></div>
+      <div class="card"><b>Пришлите канал</b><span>имя или ссылку, например <code>t.me/postnauka</code></span></div>
       <div class="card"><b>Получите колоду</b><span>картинки 9:16, их удобно выложить в канал или сторис</span></div>
     </div>
   </section>
@@ -169,13 +182,22 @@ footer a:hover{color:var(--text)}
 
   <div class="cta">
     <h2>Узнайте, какой у вас канал</h2>
-    <p>Первый анализ бесплатно</p>
     <a class="btn" href="https://t.me/insight_tg_bot" target="_blank" rel="noopener">Открыть @insight_tg_bot</a>
   </div>
+
+  <section class="contact" id="contact">
+    <h2>Связаться</h2>
+    <p>Вопросы, сотрудничество, реклама и пресса</p>
+    <a class="btn ghost" href="mailto:kristnoir@gmail.com">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      kristnoir@gmail.com
+    </a>
+  </section>
 
   <footer>
     <span>Telegram Recap · @insight_tg_bot · 2026</span>
     <nav>
+      <a href="mailto:kristnoir@gmail.com">kristnoir@gmail.com</a>
       <a href="https://telegra.ph/Publichnaya-oferta-na-okazanie-uslug-servisa-Insight-Bot-10-13" target="_blank" rel="noopener">Оферта</a>
       <a href="https://telegra.ph/Politika-obrabotki-personalnyh-dannyh-servisa-Insight-Bot-10-13" target="_blank" rel="noopener">Политика данных</a>
     </nav>
